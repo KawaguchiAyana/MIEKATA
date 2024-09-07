@@ -1,0 +1,53 @@
+<%= stylesheet_link_tag 'users_show', :media => "all" %> 
+<%# <link rel="stylesheets" href="users_show.scss"> %>
+
+<h2>My page</h2>
+  <div class="MyPage">
+    <h2>Profile</h2>
+      <p>name : <%= @user.name %></p>
+      <p>e-mail : <%= @user.email%></p>
+      <p>comment : <%= @user.profile %></p>
+    
+    <% if current_user.id == @user.id %>
+      <%= link_to "編集する", edit_user_registration_path %>
+    <% end %><br>
+
+  </div>
+
+
+<h2>ユーザーの投稿一覧</h2>
+
+<div class="tweets-container">
+  <% @user.tweets.each do |t| %>
+    <div class="tweet">
+        <div class="about"><%= t.about%></div><br>
+        <p>Date  : <%= t.Date.strftime("%Y年%m月%d日 %H:%M開演")%></p>
+        <p>Seat  : <%= t.seat%></p>
+        <p>Price : <%= t.price%></p><br>
+        <p class="picture"><%= image_tag t.image_url, size: "300x240" if t.image? %></p><br>
+        <p>Comment</p>
+        <p class="comment"> <%= t.comment%></p><br>
+        
+        <div class="evaluation">
+          <h4>評価：
+            <span class="star-rating">
+              <span class="star-rating-front" style="width: <%= getPercent(t.overall)%>%;">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>            
+            </span> 
+          </h4>
+        </div>
+
+        <br>
+        <%= link_to "詳細へ", tweet_path(t.id) %>
+        <%= link_to "編集する", edit_tweet_path(t.id) %>
+        <div class="deletes">
+          <%= button_to "削除する", tweet_path(t.id), method: :delete,class:"delete" %>
+        </div>
+
+      <br><div class="post-date"><%= t.created_at.strftime("%Y/%m/%d %H:%M") %></div>
+
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "投稿一覧に戻る", tweets_path %>

@@ -1,0 +1,224 @@
+
+#first-block {
+  background-image: url("background.jpg.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+// .title {
+//   padding: 2em 5em;
+//   margin: 2em 0;
+ 
+//   border: solid 3px #f6ebc6;
+//   background-color: #f6ebc6;
+//   border-radius: 50px;
+
+  //グラデーションしたいとき
+  //background: linear-gradient(to bottom,#c69979,#502200);
+ 
+//}
+.title1 {
+  margin: 0; 
+  padding: 0;
+  color:white;
+  font-weight: bold;
+  font-size: 250%;
+  //font-weight: 400;
+  font-style: normal;
+  
+}
+
+.title2{
+  color:#502200;
+  font-weight: bold;
+  font-size: 100%;
+  color: #fff;
+}
+#second-block{
+  text-align: center;
+}
+#third-block{
+  text-align: center;
+  // padding: 0em 0em;
+  // margin: 0em 0;
+  // font-weight: bold;
+  // color: #fff;/*文字色*/
+  // // background: #FFF;
+  // border: solid 3px #fff;/*線*/
+  // border-radius: 10px;/*角の丸み*/
+}
+
+.title {
+  text-align: center;
+}
+
+h5 {
+  font-size: 25px;
+  margin: 10px auto;
+  padding: 1rem 2rem;
+  border-top: 3px solid #f6ebc6;
+  border-bottom: 3px solid #f6ebc6;
+  color:#c29014
+
+}
+
+
+
+
+h2 {
+  font-size: 25px;
+  margin: 10px auto;
+  padding: 1rem 2rem;
+  border-top: 3px solid #f6ebc6;
+  border-bottom: 3px solid #f6ebc6;
+  color:#c29014
+
+}
+.tweets-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+    // //width: 30%;
+    // display: flex;
+    // flex-wrap: wrap;
+  }
+
+// .tweet a{
+//     color:#c29014;
+//     //position: relative;
+    
+// }
+
+// .tweet a::after{
+//   position: absolute;
+//   left: 0;
+//   content: '';
+//   width: 100%;
+//   height: 2px;
+//   background: #c29014;
+//   bottom: 5px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: 0.3s;
+// }
+    
+// .tweet a:hover::after {
+//   visibility: visible;
+//   bottom: -5px;
+//   opacity: 1;
+//   }
+ 
+
+  .tweet {
+    width: 25%;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding: 1rem 2rem;
+    border: 3px solid #f6ebc6; 
+    border-radius: 30px;
+    display:flex;
+    flex-flow: column;
+    text-align: justify;
+
+    // width: 25%;
+    // margin-top: 10px;
+    // padding-top: 20px;
+    // padding: 1rem 2rem;
+    // border: 3px solid #f6ebc6; 
+    // font-weight: bold;
+  }
+
+  .about{
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+
+  }
+  .picture{
+    text-align: center;
+  }
+  // .comment{
+  //   width: 80%;
+  //   //margin-top: 10px;
+  //   padding-top: 20px;
+  //   padding: 1rem 2rem;
+  //   border: 3px solid #f6ebc6; 
+  //   background-color: #502200;
+  //   color: #fff;
+  //   }
+
+  .comment {
+    padding: 0.5em 1em;
+    margin: 0em 0em;
+    border: double 5px #c29014;
+  }
+  .comment p {
+    margin: 0; 
+    padding: 0;
+  }
+
+  .tweet a{
+    color: #c29014; 
+    text-decoration: none; 
+    text-align: center;
+  }
+
+
+
+.delete{
+  border: 3px solid #502200;
+  border-radius: 10px;
+  background-color: #502200;
+  color:#c29014;
+  font-family: "Noto Serif JP", serif;
+  font-size: 15px;
+  }
+
+.deletes{
+  text-align: center;
+}
+
+//星評価
+h4{
+  font-size: 15px;
+  font-weight: normal;
+  color: white;
+
+}
+
+.star-rating {
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    height: 1em;
+    font-size: 25px;
+
+
+  }
+
+
+
+  .star-rating-front {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #ffcc33;
+  }
+  .star-rating-back {
+    display: inline-block;
+    color: #ccc;
+
+  }
+
+
+  

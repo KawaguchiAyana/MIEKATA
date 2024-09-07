@@ -1,0 +1,102 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+<section id="first-block">
+
+
+  <div class="title">
+    <p class="title1">MIEKATA</p>
+    <p class="title2">for Umeda theater</p>
+  </div>
+
+</section>
+
+<section id="second-block">
+  <h5>MIEKATAとは</h5>
+  
+    <p>「舞台のチケットを買いたいけどどこが良いか分からない」 </p>
+    <p>「この席で観たけど、値段の割に観えにくかった…。」</p>
+  <br>
+
+    <p>  これらの悩みを解決するために皆さんがこれまで座った席の観え方を共有できるサイトを作りました。</p>
+    <p>  本サイトは梅田芸術劇場メインホールに特化したサイトです。演目、写真、席番、値段、最後に値段がその観え方に釣り合っていたか5段階で評価してください。</p>
+    <p>   ※写真は撮影が許可されている演目で撮った写真を添付してください。</p>
+  </div>
+</section>
+
+<div class="new">
+  <%= link_to "新規投稿へ", new_tweet_path %>
+</div>
+
+<h2>客席からの観え方</h2>
+<p>カメラマークをクリックしてください</p>
+<section id="third-block">
+  <%= image_tag( 'img_mainhall4.jpg' ,usemap:"#ImageMap",width:591,height:771) %>
+  
+
+    <map name="ImageMap">
+      <area shape="poly" coords="234,78,213,85,200,93,172,116,124,188,122,203,246,237,250,83,250,83,250,83" href=# alt="下手前方" />
+      <area shape="rect" coords="261,84,350,244"  href="images/1.1Matilda.jpg"  alt="センター前方" />
+      <area shape="poly" coords="360,82,357,241,486,211,485,194,453,161,438,117,392,77,392,77" href="#" alt="上手前方" />
+      <area shape="poly" coords="115,220,112,256,97,286,246,319,245,252,245,252,245,252" href="images/1.2Matilda.jpg" alt="下手中央" />
+      <area shape="rect" coords="260,254,344,323" href="#" alt="センター中央" />
+      <area shape="poly" coords="359,254,358,319,504,291,488,261,491,223,491,223" href="#" alt="上手中央" />
+      <area shape="poly" coords="93,303,87,374,162,404,243,416,246,338" href="#" alt="下手後方" />
+      <area shape="rect" coords="261,341,342,421" href="tweets/index/tag_id=8" alt="センター後方" />
+      <area shape="poly" coords="355,338,355,415,438,406,451,392,509,377,509,310,509,310" href="#" alt="上手後方" />
+      <area shape="poly" coords="37,398,56,379,123,462,78,492,65,477,65,477" href="#" alt="2階下手①" />
+      <area shape="poly" coords="132,464,96,500,72,543,162,576,247,589,248,494,248,494" href="#" alt="2階下手②" />
+      <area shape="rect" coords="260,496,343,590" href="#" alt="2階センター" />
+      <area shape="poly" coords="353,497,357,588,438,571,445,560,522,530,501,498,468,469,468,469" href="#" alt="2階上手②" />
+      <area shape="poly" coords="474,463,515,491,531,480,529,464,555,399,539,378,539,378" href="#" alt="2階上手①" />
+      <area shape="poly" coords="44,573,30,587,62,633,95,655,116,628,116,628" href="#" alt="3階下手①" />
+      <area shape="poly" coords="131,638,107,661,83,675,69,712,159,745,241,759,242,665,242,665" href="#" alt="3階下手②" />
+      <area shape="rect" coords="257,662,343,761" href="images/3.1Matilda.jpg" alt="3階センター" />
+      <area shape="poly" coords="354,664,354,758,528,708,508,667,463,632,463,632" href="#" alt="3階上手②" />
+      <area shape="poly" coords="479,627,506,651,531,632,535,610,561,581,546,570,546,570" href="images/3.2Matilda.jpg" alt="3階上手①" />
+    </map>
+
+
+
+</section>
+
+<h2>投稿一覧</h2>
+  <div class="tweets-container">
+    <% @tweets.each do |t| %>
+      <div class="tweet">
+        
+        <div class="about"><%= t.about%></div><br>
+        <p>Date  : <%= t.Date.strftime("%Y年%m月%d日 %H:%M開演")%></p>
+        <p>Seat  : <%= t.seat%></p>
+        <p>Price : <%= t.price%></p><br>
+        <p class="picture"><%= image_tag t.image_url, size: "300x240" if t.image? %></p><br>
+        <p>Comment</p>
+        <p class="comment"> <%= t.comment%></p><br>
+        
+        <% t.tags.each do |tag| %>
+          <span><%= tag.name %></span>
+        <% end %>
+
+
+      <div>
+        <h4>評価： 
+          <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.overall)%>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+          </span> 
+        </h4>
+      </div>
+
+
+
+      <br>
+      <%= link_to "詳細へ", tweet_path(t.id) %>
+      <% if user_signed_in? && current_user.id == t.user_id %>
+        <%= link_to "編集する", edit_tweet_path(t.id) %>
+        <div class="deletes">
+          <%= button_to "削除する", tweet_path(t.id), method: :delete,class:"delete" %>
+        </div>
+      <% end %>
+      </div>
+
+    <% end %>
+  </div>

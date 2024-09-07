@@ -1,0 +1,68 @@
+<%= stylesheet_link_tag 'new', :media => "all" %>
+
+
+
+<%= form_for @tweet do |f| %>
+  <div class="field">
+     <p class="title">投稿する</p>
+      <%= f.label :席からの観え方 %><br>
+      <%= f.file_field :image %><br>
+
+      <br><%= f.label :作品名 %>
+      <%= f.text_field :about, :size => 50 %><br>
+
+      <%= f.label :日時 %>
+      <%= f.datetime_field :Date, :size => 100 %><br>
+      
+      <%= f.label :席番%>
+      <%= f.text_field :seat, :size => 50 %><br>
+
+      <%= f.label :値段 %>
+      <%= f.text_field :price, :size => 50 %><br>
+
+      <%= f.label :感想 %>
+      <%= f.text_field :comment, :size => 50 %>
+
+
+
+
+
+
+
+  <h3>評価</h3>
+  <div class="post_form">
+    <%= f.radio_button :overall, 5 ,id: 'star1'%>
+    <label for="star1"><span class="text">最高</span>★</label>
+
+    <%= f.radio_button :overall, 4 ,id: 'star2'%>
+    <label for="star2"><span class="text">良い</span>★</label>
+
+    <%= f.radio_button :overall, 3 ,id: 'star3'%>
+    <label for="star3"><span class="text">普通</span>★</label>
+
+    <%= f.radio_button :overall, 2 ,id: 'star4'%>
+    <label for="star4"><span class="text">悪い</span>★</label>
+
+    <%= f.radio_button :overall, 1 ,id: 'star5'%>
+    <label for="star5"><span class="text">最悪</span>★</label>
+　</div>
+
+  <div class='form-group'>
+        <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+            <div class='form-check'>
+                <%= tag.label class: 'form-check-label' do %>
+                    <%= tag.check_box class: 'form-check-input' %>
+                    <%= tag.text %>
+                <% end %>
+            </div>
+        <% end %>
+  </div>
+    <!-- ここまで -->
+
+
+  <%= f.submit '送信'%>
+<% end %>
+
+  </div>
+
+<%= link_to "投稿一覧に戻る", tweets_path %>

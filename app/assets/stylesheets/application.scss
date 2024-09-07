@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+    padding: 0;
+    margin: 0;
+  }
+
+
+  
+  body {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f9f6ec;
+
+    background-color: #502200;
+  }
+  
+  a{
+    color:#c29014;
+    text-decoration: none;
+  }
+        
+
+
+
+  header {
+
+        background-color: #f6ebc6;
+        height: 80px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid #502200;
+
+  }
+
+  .miekata a{
+    margin-left: -30%;
+    color:#502200;
+    font-size: 50px;
+    text-decoration: none;
+  }
+  
+  .header-list a {
+    color: #502200; 
+    text-decoration: none; 
+    position: relative;
+
+  }
+
+  .header-list a::after{
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #502200;
+    bottom: -10px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+      
+  .header-list a:hover::after {
+      visibility: visible;
+      bottom: -5px;
+      opacity: 1;
+      }
+  
+  header h1 {
+    color: #c29014;
+    margin-left: 20px;
+  }
+
+  header ul {
+    display: flex;
+  }
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  }
+
+  .logout{
+    border: 3px solid #f6ebc6;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f6ebc6;
+    font-weight: bold;
+    color:#502200;
+    font-family: "Noto Serif JP", serif;
+    font-size: 15px;
+    position: relative;
+  }
+
+  .logout::after{
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #502200;
+    bottom: -10px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+      
+  .logout:hover::after {
+      visibility: visible;
+      bottom: -5px;
+      opacity: 1;
+      }
+
+  
+
+
+
+  footer {
+    color: white;
+    height: 30px;
+    background-color: #000;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: flex-end;
+  }
+
+  

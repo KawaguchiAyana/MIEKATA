@@ -1,0 +1,111 @@
+h2{
+    font-size: 25px;
+    margin: 10px auto;
+    padding: 1rem 2rem;
+    //border-top: 3px solid #c29014;
+    border-bottom: 3px solid #f6ebc6;
+    color:#c29014
+}
+
+.tweet {
+    width: 25%;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding: 1rem 2rem;
+    border: 3px solid #f6ebc6; 
+    border-radius: 30px;
+    display:flex;
+    flex-flow: column;
+    text-align: justify;
+
+    // width: 25%;
+    // margin-top: 10px;
+    // padding-top: 20px;
+    // padding: 1rem 2rem;
+    // border: 3px solid #f6ebc6; 
+    // font-weight: bold;
+  }
+
+  .about{
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+
+  }
+  .picture{
+    text-align: center;
+  }
+  // .comment{
+  //   width: 80%;
+  //   //margin-top: 10px;
+  //   padding-top: 20px;
+  //   padding: 1rem 2rem;
+  //   border: 3px solid #f6ebc6; 
+  //   background-color: #502200;
+  //   color: #fff;
+  //   }
+
+  .comment {
+    padding: 0.5em 1em;
+    margin: 0em 0em;
+    border: double 5px #c29014;
+  }
+  .comment p {
+    margin: 0; 
+    padding: 0;
+  }
+
+  .tweet a{
+    color: #c29014; 
+    text-decoration: none; 
+    text-align: center;
+  }
+
+
+
+.delete{
+  border: 3px solid #502200;
+  border-radius: 10px;
+  background-color: #502200;
+  color:#c29014;
+  font-family: "Noto Serif JP", serif;
+  font-size: 15px;
+  }
+
+.deletes{
+  text-align: center;
+}
+
+//星評価
+h4{
+  font-size: 15px;
+  font-weight: normal;
+  color: white;
+
+}
+
+.star-rating {
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    height: 1em;
+    font-size: 25px;
+
+
+  }
+
+
+
+  .star-rating-front {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #ffcc33;
+  }
+  .star-rating-back {
+    display: inline-block;
+    color: #ccc;
+
+  }

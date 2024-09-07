@@ -1,0 +1,100 @@
+.blank2{
+    margin: 50px auto;
+    width: 50%;
+    border: 3px solid #f6ebc6;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #502200;
+    color:#f6ebc6;
+    font-size: 20px;
+    padding: 20px 40px;
+    font-weight:600;//文字の大きさ
+}
+
+
+// 場合に応じて入力する場所の大きさ変えたいよね！その場合は、.class名スペースinputで差別化する！
+.field1 input[type="text"] {
+    border-style: none;
+    width: 200px;
+    height: 30px;
+    background:#502200 ;//最初の色
+    border-radius: 10px;
+    border: 1px #f6ebc6 solid;
+    color:#f6ebc6;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.field1 input[type="text"]:hover{
+    background-color: #f6ebc6;//カーソル合わせた後の色
+}
+
+
+.field2 input[type="email"] {
+    border-style: none;
+    width: 200px;
+    height: 30px;
+    background: #502200 ;//最初の色
+    border-radius: 10px;
+    border: 1px #f6ebc6 solid;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.field2 input[type="email"]:hover{
+    background-color: #f6ebc6;//カーソル合わせたあとの色
+
+}
+
+.field3 input[type="password"] {
+    border-style: none;
+    width: 200px;
+    height: 30px;
+    background: #502200 ;//最初の色
+    border-radius: 10px;
+    border: 1px #f6ebc6 solid;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.field3 input[type="password"]:hover{
+    background-color: #f6ebc6;//カーソル合わせたあとの色
+
+}
+
+
+.field4 input[type="password"] {
+    border-style: none;
+    width: 200px;
+    height: 30px;
+    background: #502200 ;//最初の色
+    border-radius: 10px;
+    border: 1px #f6ebc6 solid;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.field4 input[type="password"]:hover{
+    background-color: #f6ebc6;//カーソル合わせたあとの色
+
+}
+
+
+
+//ログインボタン
+.actions input[type="submit"] {
+    border-style: none;
+    width: 150px;
+    height: 30px;
+    background: #502200;
+    border-radius: 10px;
+    border: 1px #f6ebc6 solid;
+    color:#f6ebc6;
+}
+
+
+.actions input[type="submit"]:hover {
+    cursor: pointer;
+    background-color:#f6ebc6 ;
+    color:#502200;
+}

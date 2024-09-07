@@ -1,0 +1,102 @@
+.field label{
+  margin: 50px auto;
+  width: 50%;
+  
+  border: 10px solid #f6ebc6;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f6ebc6;
+  color:#c29014;
+  font-size: 20px;
+
+  
+
+}
+
+.field input[type="text"] {
+  border-style: none;
+  background:white ;//最初の色
+  border-radius: 10px;//角を丸くする
+  border: 1px #f6ebc6 solid;
+  color:#c29014;
+  width: 95%;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+
+}
+
+.field input[type="text"]:hover{
+  background-color: #502200;//カーソル合わせた後の色
+}
+
+h3{ //星評価
+  font-size:20px;
+
+}
+
+
+
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  //border-top: 3px solid #c29014;
+  border-bottom: 3px solid #c29014;
+}
+
+
+.field input[type="submit"] {
+  border-color:#f6ebc6;
+  width: 200px;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #c29014;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.field input[type="submit"]:hover{
+  background-color: #c29014;//カーソル合わせた後の色
+  color:#f6ebc6;
+  
+}
+  
+
+
+.post_form{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.post_form input[type='radio']{
+  display: none;
+}
+.post_form label{
+  position: relative;
+  padding: 10px 10px 0;
+  width:95%;
+  color: gray;
+  cursor: pointer;
+  font-size: 30px; /*星の大きさを変更するときはここ*/
+
+}
+.post_form label .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9px; /*星の上の説明書きの大きさを変更するときはここ*/
+  color: gray;
+}
+.post_form label:hover,
+.post_form label:hover ~ label,
+.post_form input[type='radio']:checked ~ label{
+  color: #ffcc00;
+}

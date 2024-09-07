@@ -1,0 +1,61 @@
+h2{
+    font-size: 25px;
+    margin: 10px auto;
+    padding: 1rem 2rem;
+    border-top: 3px solid #f6ebc6;
+    border-bottom: 3px solid #f6ebc6;
+    color:#c29014
+    
+}
+
+.user.edit{
+    margin: 50px auto;
+    width: 50%;
+    
+    border: 3px solid #f6ebc6;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f6ebc6;
+    color:#c29014;
+    font-size: 20px;
+
+}
+
+
+// .field1 input[type="text"] {
+//   border-style: none;
+//   background:white ;//最初の色
+//   border-radius: 10px;//角を丸くする
+//   // border: 1px #f6ebc6 solid;
+//   color:#f6ebc6;
+//   width: 95%;
+//   height: 30px;
+//   cursor: pointer;
+//   transition: all 0.3s;
+// }
+
+// .field input[type="text"]:hover{
+//     background-color: #c29014;//カーソル合わせた後の色
+// }
+
+
+
+
+.actions input[type="submit"] {
+    border-color:#f6ebc6;
+    width: 200px;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #f6ebc6;
+    background-color: #c29014;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .actions input[type="submit"]:hover{
+    background-color:#502200 ;//カーソル合わせた後の色
+    color:#c29014;
+    
+  }
